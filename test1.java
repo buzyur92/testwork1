@@ -8,7 +8,6 @@ public class test1 {
         a = readValidNumber(scanner, "первое");
         b = readValidNumber(scanner, "второе");
 
-        // Сравнение чисел
         if (a > b) {
             System.out.println("a > b");
         } else if (a < b) {
@@ -17,12 +16,10 @@ public class test1 {
             System.out.println("a = b");
         }
 
-        // Арифметические операции
         System.out.println("a + b = " + (a + b));
         System.out.println("a - b = " + (a - b));
         System.out.println("a * b = " + (a * b));
 
-        // Проверка деления на ноль
         if (b != 0) {
             System.out.println("a / b = " + (a / b));
         } else {
@@ -37,13 +34,11 @@ public class test1 {
             System.out.print("Введите " + numberName + " целое число (макс. 10 цифр): ");
             String input = scanner.nextLine().trim();
 
-            // Проверка пустого ввода
             if (input.isEmpty()) {
                 System.out.println("Ошибка: введите число!");
                 continue;
             }
 
-            // Проверка длины (макс. 11 символов, если отрицательное, иначе 10)
             boolean isNegative = input.startsWith("-");
             int maxLength = isNegative ? 11 : 10;
 
@@ -52,7 +47,6 @@ public class test1 {
                 continue;
             }
 
-            // Проверка, что это целое число
             try {
                 return Integer.parseInt(input);
             } catch (NumberFormatException e) {
